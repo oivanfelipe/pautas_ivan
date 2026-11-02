@@ -29,7 +29,7 @@
 7. **Login compartilhado:** como o projeto já tem usuários de outro app, qualquer pessoa que fizer login Google no mesmo projeto vira um usuário. As políticas RLS do Pautas filtram por `user_id = auth.uid()`, então os dados não vazam entre usuários.
 8. **Offline-first no cliente:** leitura e escrita da última semana funcionam sem rede; as edições entram numa fila e sobem ao reconectar. Em conflito, vale a edição mais recente (`updated_at`).
 9. **Sem segredo no cliente:** o navegador só recebe a URL e a chave `anon` do Supabase. Chave de serviço, segredo do cliente Google e `CRON_SECRET` ficam apenas em variáveis de ambiente da Vercel.
-10. **Criptografia do refresh token:** em repouso, via `pgcrypto` com chave guardada em variável de ambiente (não no banco), ou Supabase Vault. A escolha final fica no Esquema de Backend.
+10. **Criptografia do refresh token:** feita no servidor da aplicação (AES-256-GCM) com a chave `TOKEN_ENCRYPTION_KEY` guardada só na Vercel. O banco armazena apenas o texto cifrado e nunca tem acesso à chave.
 
 ## Ambientes
 - **Local:** `next dev` no notebook, apontando para o mesmo projeto Supabase (não há banco de desenvolvimento separado).
