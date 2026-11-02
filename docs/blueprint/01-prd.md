@@ -13,14 +13,14 @@ Hoje o Ivan chega nas reuniões sem ter registrado, em um lugar único, o que pr
 ## Funcionalidades da primeira versão
 
 1. **Login com Google** — entra com a conta Google e autoriza leitura da Agenda (somente leitura).
-2. **Sincronização da semana** — busca os próximos 7 dias da agenda principal e cria uma pauta vazia por reunião. Só entram eventos com outros participantes; ficam de fora eventos sem convidados, de dia inteiro e os recusados. Roda ao abrir o app, ao puxar para atualizar e uma vez por dia.
-3. **Tela Semana** — lista as reuniões agrupadas por dia, com horário, título e progresso do checklist (ex.: 3/5). Hoje aparece destacado e a reunião em andamento ganha atalho.
+2. **Sincronização da agenda** — busca a agenda principal e cria uma pauta vazia por reunião. Só entram eventos com outros participantes; ficam de fora eventos sem convidados, de dia inteiro e os recusados. Cobre sempre o período que está sendo exibido (dia, semana ou mês) e roda ao abrir o app, ao navegar para outro período, ao puxar para atualizar e uma vez por dia.
+3. **Tela Agenda com visão Dia, Semana ou Mês** — o Ivan alterna entre as três visões, como no Google Agenda, e navega para frente e para trás no tempo. Abre na visão Semana. Cada reunião mostra horário, título e progresso do checklist (ex.: 3/5). Hoje aparece destacado e a reunião em andamento ganha atalho.
 4. **Pauta da reunião** — anotações livres e checklist, com salvamento automático.
 5. **Checklist básico** — adicionar, marcar, desmarcar e apagar itens.
 6. **Reordenar itens** — arrastar para definir a ordem em que os assuntos serão falados.
 7. **Copiar pendências da reunião anterior** — em reuniões recorrentes (ex.: Daily), os itens não marcados da ocorrência anterior podem ser trazidos para a nova pauta.
 8. **Modelo de pauta por reunião recorrente** — o Ivan define itens fixos para uma série (ex.: Daily) e toda nova ocorrência já nasce com eles.
-9. **Modo Reunião** — tela limpa para uso durante a reunião: checklist grande, marcar com um toque, tela sempre ligada.
+9. **Modo Reunião** — tela limpa para uso durante a reunião: checklist grande, marcar com um toque, tela sempre ligada. Só abre quando o Ivan toca no botão "Modo Reunião"; nunca abre sozinho.
 10. **Funciona sem sinal** — a última semana fica disponível offline e as edições feitas sem conexão sobem quando o sinal voltar.
 11. **Instalável no celular (PWA)** — abre da tela inicial como um app.
 
