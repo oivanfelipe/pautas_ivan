@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Tokens do Design Brief (docs/blueprint/04-design-brief.md) */
+:root {
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --border: #e3e6ea;
+  --text: #14171a;
+  --text-2: #5c6670;
+  --accent: #2563eb;
+  --on-accent: #ffffff;
+  --live: #eaf1fe;
+  --warn: #b45309;
+  --danger: #b42318;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1013;
+    --surface: #171a1f;
+    --border: #272b32;
+    --text: #f2f4f6;
+    --text-2: #9aa3ad;
+    --accent: #5b8def;
+    --on-accent: #0e1013;
+    --live: #16233f;
+    --warn: #f59e0b;
+    --danger: #f97066;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0e1013;
+  --surface: #171a1f;
+  --border: #272b32;
+  --text: #f2f4f6;
+  --text-2: #9aa3ad;
+  --accent: #5b8def;
+  --on-accent: #0e1013;
+  --live: #16233f;
+  --warn: #f59e0b;
+  --danger: #f97066;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-live: var(--live);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
