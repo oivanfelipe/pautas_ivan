@@ -29,7 +29,9 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const { pathname } = request.nextUrl;
-  const isPublic = pathname === "/login" || pathname.startsWith("/auth/");
+  // /api/* faz a própria checagem (sessão em /api/sync, CRON_SECRET em /api/cron/*).
+  const isPublic =
+    pathname === "/login" || pathname.startsWith("/auth/") || pathname.startsWith("/api/");
 
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();
